@@ -228,6 +228,19 @@ open class FSPopoverView: UIView {
         }
     }
     
+    /// The shadowOffset of the popover view shadow.
+    /// Default value see `FSPopoverViewAppearance`.
+    ///
+    /// * A reload request will be set when this property is changed.
+    ///
+    final public var shadowOffset: CGSize {
+        didSet {
+            if shadowOffset != oldValue {
+                setNeedsReload()
+            }
+        }
+    }
+    
     // MARK: Properties/Override
     
     /// It's objected to use this property to set the background color of popover view.
@@ -315,6 +328,7 @@ open class FSPopoverView: UIView {
             shadowColor = appearance.shadowColor
             shadowRadius = appearance.shadowRadius
             shadowOpacity = appearance.shadowOpacity
+            shadowOffset = appearance.shadowOffset
         }
         super.init(frame: .zero)
         p_didInitialize()
@@ -825,6 +839,7 @@ private extension FSPopoverView {
             context.shadowColor     = shadowColor
             context.shadowRadius    = shadowRadius
             context.shadowOpacity   = shadowOpacity
+            context.shadowOffset    = shadowOffset
             
             let drawer = FSPopoverDrawer(context: context)
             

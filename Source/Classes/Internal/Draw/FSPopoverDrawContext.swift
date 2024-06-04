@@ -25,6 +25,7 @@ struct FSPopoverDrawContext {
     var shadowRadius: CGFloat = 0.0
     var shadowOpacity: Float = 1.0
     var shadowColor: UIColor?
+    var shadowOffset: CGSize = .zero
     
     init () {}
 }

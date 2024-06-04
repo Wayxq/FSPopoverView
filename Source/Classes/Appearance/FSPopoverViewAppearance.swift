@@ -22,6 +22,7 @@ public final class FSPopoverViewAppearance {
     public var shadowColor: UIColor?
     public var shadowRadius: CGFloat
     public var shadowOpacity: Float
+    public var shadowOffset: CGSize
     public var backgroundColor: UIColor?
     // list
     public var spacing: CGFloat
@@ -43,6 +44,7 @@ public final class FSPopoverViewAppearance {
         borderWidth = 1.0
         shadowRadius = 3.0
         shadowOpacity = 0.68
+        shadowOffset = .zero
         spacing = 6.0
         textFont = .systemFont(ofSize: 18.0)
         separatorInset = .init(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)

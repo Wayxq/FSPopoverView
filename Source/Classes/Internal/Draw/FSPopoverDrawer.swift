@@ -151,7 +151,7 @@ struct FSPopoverDrawer {
             layer.fillColor = UIColor.white.cgColor
             layer.shadowColor = shadowColor.cgColor
             layer.shadowRadius = radius
-            layer.shadowOffset = .zero
+            layer.shadowOffset = self.context.shadowOffset
             layer.shadowOpacity = min(1.0, self.context.shadowOpacity)
             layer.magnificationFilter = .nearest
             layer.render(in: context)
